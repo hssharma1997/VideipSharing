@@ -15,7 +15,7 @@ const Button = ({label,onPress}:Props) => {
       locations={[0.9, 1]}
       colors={['#FF8C00', '#FFA300']}
       style={styles.container}>
-      <Pressable style={styles.preessableContainer} onPress={onPress}>
+      <Pressable style={styles.preessableContainer} onPress={onPress} >
         <Text style={styles.textStyle}>{label}</Text>
       </Pressable>
     </LinearGradient>
@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     height: 60,
     borderRadius: 8,
     padding: 10,
-    marginTop: 12,
+    marginVertical: 12,
     justifyContent: 'flex-end',
   },
   preessableContainer: {justifyContent: 'center', height: '100%'},

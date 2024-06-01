@@ -11,13 +11,16 @@ import {
   View,
 } from 'react-native';
 import OnBoarding from './src/screens/onBoarding'
+import Signup from './src/screens/Signup'
+
 
 
 function App(): React.JSX.Element {
  
   return (
     // <SafeAreaView style={{flex:1}} >
-     <OnBoarding/>
+    //  <OnBoarding/>
+    <Signup/>
     // </SafeAreaView>
   );
 }
