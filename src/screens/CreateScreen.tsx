@@ -3,7 +3,7 @@ import React from 'react'
 
 const CreateScreen = () => {
   return (
-    <View>
+    <View style={styles.page}>
       <Text>CreateScreen</Text>
     </View>
   )
@@ -11,4 +11,9 @@ const CreateScreen = () => {
 
 export default CreateScreen
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  page: {
+    flex: 1,
+    backgroundColor: '#161622',
+  },
+})

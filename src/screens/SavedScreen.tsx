@@ -3,7 +3,7 @@ import React from 'react'
 
 const SavedScreen = () => {
   return (
-    <View>
+    <View style={styles.page}>
       <Text>SavedScreen</Text>
     </View>
   )
@@ -11,4 +11,9 @@ const SavedScreen = () => {
 
 export default SavedScreen
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  page: {
+    flex: 1,
+    backgroundColor: '#161622',
+  },
+})

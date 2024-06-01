@@ -11,7 +11,7 @@ const Tab = createBottomTabNavigator();
 
 const LoggedInStack = () => {
   return (
-    <Tab.Navigator screenOptions={{headerShown:false}}>
+    <Tab.Navigator screenOptions={{headerShown:false,tabBarStyle:{backgroundColor:'#161622'}}} >
     <Tab.Screen name="Home" component={HomeScreen} />
     <Tab.Screen name="Create" component={CreateScreen} />
     <Tab.Screen name="Profile" component={ProfileScreen} />
