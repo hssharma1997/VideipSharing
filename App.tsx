@@ -1,29 +1,25 @@
 
 import React from 'react';
-
+import { NavigationContainer } from '@react-navigation/native';
 import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
  
-  View,
+  StyleSheet,
 } from 'react-native';
-import OnBoarding from './src/screens/onBoarding'
+import OnBoarding from './src/screens/OnBoarding'
 import Signup from './src/screens/Signup'
 import Signin from './src/screens/Signin';
+import NavigationStack from './src/NavigationStack';
 
 
 
 function App(): React.JSX.Element {
  
   return (
-    // <SafeAreaView style={{flex:1}} >
-    //  <OnBoarding/>
-    // <Signup/>
-    <Signin/>
-    // </SafeAreaView>
+  
+    <NavigationContainer>
+      <NavigationStack/>
+    </NavigationContainer>
+    
   );
 }
 

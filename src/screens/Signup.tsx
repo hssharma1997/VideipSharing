@@ -3,7 +3,7 @@ import React, {useCallback, useRef} from 'react';
 import Textinput from '../components/Textinput';
 import Button from '../components/Button';
 
-const signUp = () => {
+const SignUp = ({navigation}) => {
   const userNameRef = useRef(null);
   const userEmailRef = useRef(null);
   const passwordRef = useRef(null);
@@ -13,7 +13,8 @@ const signUp = () => {
     if(userNameRef.current.value === '' || userEmailRef.current.value === '' || passwordRef.current.value === ''){
       Alert.alert('Error','Please fill all the fields')
     }else{
-      Alert.alert('Success','You have successfully signed up')
+     
+      navigation.navigate('SignIn')
     }
   },[])
   return (
@@ -57,7 +58,7 @@ const signUp = () => {
   );
 };
 
-export default signUp;
+export default SignUp;
 
 const styles = StyleSheet.create({
   page: {

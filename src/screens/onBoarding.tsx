@@ -9,7 +9,7 @@ import React from 'react';
 
 import Button from '../components/Button';
 
-const onBoarding = () => {
+const OnBoarding = ({navigation}) => {
   return (
     <SafeAreaView style={styles.page}>
       <View style={{padding: 16,flex:1,justifyContent:'space-around'}}>
@@ -53,14 +53,14 @@ const onBoarding = () => {
             Exploration with Aora
           </Text>
         </View>
-        <Button label={' Continue with Email'} onPress={()=>null}/>
+        <Button label={' Continue with Email'} onPress={()=>navigation.navigate('SignUp')}/>
         
       </View>
     </SafeAreaView>
   );
 };
 
-export default onBoarding;
+export default OnBoarding;
 
 const styles = StyleSheet.create({
   page: {

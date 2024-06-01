@@ -3,7 +3,7 @@ import React, { useRef } from 'react'
 import Textinput from '../components/Textinput';
 import Button from '../components/Button';
 
-const Signin = () => {
+const Signin = ({navigation}) => {
     const userEmailRef = useRef('');
   const passwordRef = useRef('');
 
@@ -34,7 +34,7 @@ const Signin = () => {
                 inputRef={passwordRef}
               />
               <Text style={styles.forgotPassText}>Forgot password</Text>
-              <Button label={'Sign Up'} onPress={() => null} />
+              <Button label={'Log In'} onPress={() => navigation.navigate('LoggedInStack')} />
     
               <Text
                 style={styles.loginText}>
