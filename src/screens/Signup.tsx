@@ -4,13 +4,17 @@ import Textinput from '../components/Textinput';
 import Button from '../components/Button';
 
 const signUp = () => {
-  const userNameRef = useRef('');
-  const userEmailRef = useRef('');
-  const passwordRef = useRef('');
+  const userNameRef = useRef(null);
+  const userEmailRef = useRef(null);
+  const passwordRef = useRef(null);
 
 
   const onSignup = useCallback(()=>{
-console.log(userEmailRef.getValue,'vv');
+    if(userNameRef.current.value === '' || userEmailRef.current.value === '' || passwordRef.current.value === ''){
+      Alert.alert('Error','Please fill all the fields')
+    }else{
+      Alert.alert('Success','You have successfully signed up')
+    }
   },[])
   return (
     <SafeAreaView style={styles.page}>
@@ -25,25 +29,23 @@ console.log(userEmailRef.getValue,'vv');
         <View style={{marginVertical: 8, flex: 0.85}}>
           <Text
             style={styles.signUpText}>Sign up</Text>
-
           <Textinput
             label={'Username'}
             placeholder={'Your unique username'}
-            ref={userNameRef}
+            inputRef={userNameRef}
           />
           <Textinput
             label={'Email'}
             placeholder={'example@example.com'}
-            ref={userEmailRef}
+            inputRef={userEmailRef}
           />
           <Textinput
             label={'Password'}
             placeholder={'Enter your password'}
             secure={true}
-            ref={passwordRef}
+            inputRef={passwordRef}
           />
-          <Button label={'Sign Up'} onPress={() => onSignup} />
-
+          <Button label={'Sign Up'} onPress={() => onSignup()} />
           <Text
             style={styles.loginText}>
             Already have an account?{' '}

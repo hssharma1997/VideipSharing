@@ -2,20 +2,14 @@ import {StyleSheet, Text, View, TextInput} from 'react-native';
 import React, {forwardRef, useImperativeHandle, useRef} from 'react';
 
 type Props = {
+  inputRef:any;
   label: string;
   secure?: boolean;
   placeholder?: string;
 };
 
-const Textinput = forwardRef(
-  ({label, placeholder = '', secure = false}: Props, ref) => {
-    const valueRef = useRef(null);
-
-    useImperativeHandle(ref, () => ({
-      getValue: () => {
-        return valueRef.current.value;
-      },
-    }));
+const Textinput = 
+  ({inputRef,label, placeholder = '', secure = false}: Props) => {
     return !secure ? (
       <View style={styles.container}>
         {label && <Text style={styles.labelText}>{label}</Text>}
@@ -23,25 +17,27 @@ const Textinput = forwardRef(
           style={styles.textInputBox}
           placeholder={placeholder}
           placeholderTextColor={'#7B7B8B'}
-          ref={valueRef}
+          ref={inputRef}
+          onChangeText={(e) => inputRef.current.value = e}
         />
       </View>
     ) : (
       <View style={styles.container}>
-          {label && <Text style={styles.labelText}>{label}</Text>}
+        {label && <Text style={styles.labelText}>{label}</Text>}
         <View style={styles.textInputBox}>
           <TextInput
             style={{color: '#fff'}}
             placeholder={placeholder}
             placeholderTextColor={'#7B7B8B'}
-            ref={valueRef}
+           
             secureTextEntry={true}
+            ref={inputRef}
+            onChangeText={(e) => inputRef.current.value = e}
           />
         </View>
       </View>
     );
-  },
-);
+  }
 
 export default Textinput;
 
@@ -61,7 +57,6 @@ const styles = StyleSheet.create({
     borderColor: '#232533',
     backgroundColor: '#1E1E2D',
     color: '#fff',
-  
   },
   container: {
     marginVertical: 12,
