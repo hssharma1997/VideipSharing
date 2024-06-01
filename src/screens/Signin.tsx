@@ -71,6 +71,6 @@ const styles = StyleSheet.create({
         color: '#CDCDE0',
       },
       forgotPassText:{
-        textAlign:'right',color:'##CDCDE0',fontWeight:'400',fontSize:14,lineHeight:20
+        textAlign:'right',color:'#CDCDE0',fontWeight:'400',fontSize:14,lineHeight:20
       }
 })

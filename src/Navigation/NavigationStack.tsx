@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import onBoarding from './screens/OnBoarding';
-import SignUp from './screens/Signup';
-import Signin from './screens/Signin';
-import LoggedInStack from './screens/LoggedInStack'
+import onBoarding from '../screens/OnBoarding';
+import SignUp from '../screens/Signup';
+import Signin from '../screens/Signin';
+import LoggedInStack from './LoggedInStack'
 
 
 const Stack = createNativeStackNavigator();

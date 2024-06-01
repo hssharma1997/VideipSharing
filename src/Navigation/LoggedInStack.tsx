@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import HomeScreen from './HomeScreen';
-import ProfileScreen from './ProfileScreen';
-import SavedScreen from './SavedScreen';
-import CreateScreen from './CreateScreen';
+import HomeScreen from '../screens/HomeScreen';
+import ProfileScreen from '../screens/ProfileScreen';
+import SavedScreen from '../screens/SavedScreen';
+import CreateScreen from '../screens/CreateScreen';
 
 const Tab = createBottomTabNavigator();
 

@@ -5,10 +5,7 @@ import {
  
   StyleSheet,
 } from 'react-native';
-import OnBoarding from './src/screens/OnBoarding'
-import Signup from './src/screens/Signup'
-import Signin from './src/screens/Signin';
-import NavigationStack from './src/NavigationStack';
+import NavigationStack from './src/Navigation/NavigationStack';
 
 
 
